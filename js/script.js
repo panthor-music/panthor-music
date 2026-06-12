@@ -592,7 +592,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // ── BOOKING FORM: Formspree (email) + WhatsApp ──────────────────────
     const PANTHOR_WHATSAPP  = settingsData?.contact?.whatsapp || '18762545480';
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // replace with real ID
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvjrzjr';
 
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
