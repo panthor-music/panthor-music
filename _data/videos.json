@@ -1,0 +1,15 @@
+{
+  "coming_soon": true,
+  "featured": {
+    "video_id": "V-_O7nl0Ii0",
+    "title": "Drifter",
+    "subtitle": "Official Music Video",
+    "description": "The latest visual from Panthor — a cinematic journey through sound and story, shot in the heart of Jamaica.",
+    "thumbnail": "Panthor Pics/Music Video 1.webp"
+  },
+  "more_videos": [
+    { "video_id": "V-_O7nl0Ii0", "title": "I Love You (Official Video)",        "thumbnail": "Panthor Pics/Music Video 2.webp" },
+    { "video_id": "V-_O7nl0Ii0", "title": "Take Life Easy (Official Video)",    "thumbnail": "Panthor Pics/Music Video 3.webp" },
+    { "video_id": "V-_O7nl0Ii0", "title": "Gates of Return (Official Video)",   "thumbnail": "Panthor Pics/Music Video 4.webp" }
+  ]
+}

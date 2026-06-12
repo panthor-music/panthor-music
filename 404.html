@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Panthor Music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="/logo.webp">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-bright: #ffd700;
+            --bg: #050505;
+            --text: #f5f5f5;
+            --muted: #aaaaaa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .bg-glow {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(212,175,55,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .code {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 10px;
+            background: linear-gradient(90deg, var(--gold) 0%, #cc1010 50%, var(--gold) 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+            margin-bottom: 10px;
+        }
+        @keyframes shimmer {
+            0%   { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .logo span { color: #cc1a1a; font-style: italic; }
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text);
+            margin-bottom: 14px;
+        }
+        p {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 420px;
+            margin-bottom: 40px;
+        }
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px;
+            background: linear-gradient(45deg, #997a00, var(--gold));
+            color: #000;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(212,175,55,0.3);
+            transition: all 0.3s;
+        }
+        .home-btn:hover {
+            box-shadow: 0 8px 30px rgba(212,175,55,0.5);
+            transform: translateY(-2px);
+        }
+        .particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: floatUp linear infinite;
+        }
+        @keyframes floatUp {
+            0%   { transform: translateY(100vh); opacity: 0; }
+            50%  { opacity: 0.5; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="logo">PANTHOR.<span> MUSIC</span></div>
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>Looks like this track doesn't exist. Head back to the main stage.</p>
+    <a href="/" class="home-btn"><i class="fas fa-home"></i> Back to Home</a>
+
+    <script>
+        const p = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const el = document.createElement('div');
+            el.className = 'particle';
+            el.style.left = Math.random() * 100 + '%';
+            el.style.animationDuration = (Math.random() * 5 + 4) + 's';
+            el.style.animationDelay = (Math.random() * 4) + 's';
+            p.appendChild(el);
+        }
+    </script>
+</body>
+</html>

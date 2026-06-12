@@ -1,0 +1,15 @@
+{
+  "tracks": [
+    { "title": "Drifter",                  "src": "MP3s/mp3s/mp3s/Drifter bpm 160 Final Master.mp3" },
+    { "title": "Gates of Return",          "src": "MP3s/mp3s/mp3s/Gates of Return BPM 140 Final Master.mp3" },
+    { "title": "I Love You",               "src": "MP3s/mp3s/mp3s/I love you bpm 140 Final Master.mp3" },
+    { "title": "Life Is for Man to Live",  "src": "MP3s/mp3s/mp3s/Life is for Man to Live bpm 84 Final Master.mp3" },
+    { "title": "No War",                   "src": "MP3s/mp3s/mp3s/No War BPM 85 Final Master.mp3" },
+    { "title": "No Woman Stands Alone",    "src": "MP3s/mp3s/mp3s/No Woman Stands Alone bpm 160 Final Master.mp3" },
+    { "title": "Oh Jah",                   "src": "MP3s/mp3s/mp3s/Oh Jah bpm150 Final Master.mp3" },
+    { "title": "Purpose",                  "src": "MP3s/mp3s/mp3s/Purpose BPM 150 Final Master.mp3" },
+    { "title": "School Days",              "src": "MP3s/mp3s/mp3s/School Days bpm 145 Final Master.mp3" },
+    { "title": "Take Life Easy",           "src": "MP3s/mp3s/mp3s/Take Life Easy bpm 160 Final Master.mp3" },
+    { "title": "Water Pumpee",             "src": "MP3s/mp3s/mp3s/Water Pumpee bpm 87 Audio Final Master.mp3" }
+  ]
+}

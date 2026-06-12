@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panthor | Official Music Artist Website</title>
+    <meta name="description" content="Official website for Panthor, a music artist from St. Mary, Jamaica. Explore music, videos, gallery, and behind the scenes.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#d4af37">
+
+    <!-- Open Graph (Facebook, WhatsApp, iMessage) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://panthor-music.vercel.app/">
+    <meta property="og:title" content="Panthor | Official Music Artist Website">
+    <meta property="og:description" content="From St. Mary, Jamaica to the World. Stream music, watch videos, and book Panthor for your next event.">
+    <meta property="og:image" content="https://panthor-music.vercel.app/Panthor%20Pics/Edited%20Pics/Hero.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Panthor Music">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://panthor-music.vercel.app/">
+    <meta name="twitter:title" content="Panthor | Official Music Artist Website">
+    <meta name="twitter:description" content="From St. Mary, Jamaica to the World. Stream music, watch videos, and book Panthor for your next event.">
+    <meta name="twitter:image" content="https://panthor-music.vercel.app/Panthor%20Pics/Edited%20Pics/Hero.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://panthor-music.vercel.app/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Panthor",
+      "url": "https://panthor-music.vercel.app/",
+      "image": "https://panthor-music.vercel.app/Panthor%20Pics/Edited%20Pics/Hero.png",
+      "description": "Panthor is a reggae and Caribbean music artist originally from Kingston, Jamaica. Stream music, watch videos, and book Panthor for your next event.",
+      "genre": ["Reggae", "Caribbean"],
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Kingston, Jamaica"
+      },
+      "recordLabel": {
+        "@type": "Organization",
+        "name": "Maunnell Music",
+        "url": "https://maunnellmusic.com"
+      },
+      "sameAs": [
+        "https://www.instagram.com/derrick3303/",
+        "https://www.youtube.com/@derrickjames9941"
+      ]
+    }
+    </script>
+
+    <!-- Preconnects for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preload hero background (LCP) -->
+    <link rel="preload" as="image" href="Panthor%20Pics/Edited%20Pics/Hero.webp" type="image/webp">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Preview Limit Modal -->
+    <div id="preview-modal" class="preview-overlay">
+        <div class="preview-box">
+            <button id="preview-close" class="preview-close-btn" aria-label="Close">&times;</button>
+            <div class="preview-icon"><i class="fas fa-headphones"></i></div>
+            <h2 class="preview-title">Preview Limit Reached</h2>
+            <p class="preview-sub">You've heard the first minute. Listen to the full track on your favourite platform.</p>
+            <div class="preview-cta-grid">
+                <div class="preview-cta-card">
+                    <i class="fab fa-spotify"></i>
+                    <h3>Spotify</h3>
+                    <a href="#" target="_blank" rel="noopener" class="preview-stream-btn" data-social="spotify">Listen Now</a>
+                </div>
+                <div class="preview-cta-card">
+                    <i class="fab fa-apple"></i>
+                    <h3>Apple Music</h3>
+                    <a href="#" target="_blank" rel="noopener" class="preview-stream-btn" data-social="apple-music">Listen Now</a>
+                </div>
+                <div class="preview-cta-card">
+                    <i class="fab fa-youtube"></i>
+                    <h3>YouTube</h3>
+                    <a href="https://www.youtube.com/@derrickjames9941" target="_blank" rel="noopener" class="preview-stream-btn">Listen Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="Panthor Pics/sitelogo.webp" alt="Panthor" class="preloader-logo">
+        <p class="preloader-name">PANTHOR.<span style="color:#cc1a1a; font-style:italic;"> MUSIC</span></p>
+    </div>
+
+
+
+    <nav class="navbar">
+        <div class="logo">PANTHOR.<span class="logo-red"> MUSIC</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#bts">Behind the Scenes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="PANTHOR">PANTHOR</h1>
+            <p class="subtitle" id="hero-subtitle">From St. Mary, Jamaica to the World</p>
+            <div class="cta-group">
+                <a href="#music" class="btn btn-primary magnetic-btn">Listen Now</a>
+                <a href="#contact" class="btn btn-outline magnetic-btn">Bookings</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section dark-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="Panthor Pics/Edited Pics/About Photo.webp" alt="Panthor Artist" class="about-img" loading="lazy" fetchpriority="high">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">The Artist</h2>
+                    <div id="about-paragraphs">
+                        <p>Born in the musical city of Kingston, <strong>Panthor</strong> began his musical journey in the seventies and migrated to the US in 1971. There, he attended Eastern District High School and went on to receive formal voice training at Kingsborough Community College, where he sang in the choir.</p>
+                        <p>His first recording was done at the legendary Bullwackies Recording Studio. Over the years, he has performed at popular clubs in Brooklyn, pool parties in Queens and Long Island, and sang with both the Brimstone Band and the Melody Vibez Band.</p>
+                    </div>
+
+                    <div class="about-extended" id="aboutExtended">
+                        <p>Panthor has graced the stages of several premier hotels and venues, including the Bahia Principe, FDR, Treasure Beach, Travellers Inn, Tek It Easy, and Amnesia Night Club, to name a few. Currently working with some of the industry's greatest musicians, music has always been a passionate love for him. He gives continuous thanks to the Almighty for life, health, and strength.</p>
+                    </div>
+
+                    <div class="about-actions" style="margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button id="readMoreBtn" class="btn btn-outline magnetic-btn">Read More</button>
+                        <a href="#contact" class="btn btn-primary magnetic-btn">Book Panthor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="section">
+            <h2 class="section-title">Latest Tracks</h2>
+            <div class="mp-card">
+                <!-- Left: Vinyl + Controls -->
+                <div class="mp-left">
+                    <div class="mp-vinyl-wrap">
+                        <div class="mp-vinyl" id="mpVinyl">
+                            <div class="mp-label">
+                                <img src="Panthor Pics/sitelogo.webp" alt="Panthor" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="mp-glow"></div>
+                    </div>
+                    <div class="mp-info">
+                        <span class="mp-badge">NOW PLAYING</span>
+                        <h3 class="mp-title" id="mpTitle">Select a Track</h3>
+                        <p class="mp-artist">Panthor</p>
+                    </div>
+                    <div class="mp-eq" id="mpEq">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="mp-seek-row">
+                        <span id="mpCur">0:00</span>
+                        <div class="mp-seek" id="mpSeek"><div class="mp-seek-fill" id="mpFill"></div></div>
+                        <span id="mpTot">0:00</span>
+                    </div>
+                    <div class="mp-ctrl-row">
+                        <button class="mp-btn" id="mpPrev" title="Previous"><i class="fas fa-step-backward"></i></button>
+                        <button class="mp-btn mp-play" id="mpPlay"><i class="fas fa-play" id="mpPlayIcon"></i></button>
+                        <button class="mp-btn" id="mpNext" title="Next"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                    <div class="mp-vol-row">
+                        <i class="fas fa-volume-up" style="color:var(--text-muted);font-size:.85rem"></i>
+                        <input type="range" id="mpVol" class="mp-vol" min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+                <!-- Right: Track List -->
+                <div class="mp-right" id="mpList"></div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+
+        <section id="videos" class="section dark-section">
+            <div id="videos-coming-soon" style="text-align: center; margin-bottom: 15px;">
+                <span class="coming-soon-pop">Coming Soon</span>
+            </div>
+            <h2 class="section-title">Music Videos</h2>
+
+            <!-- Featured New Release -->
+            <div class="new-release-wrap">
+                <div class="nr-layout">
+                    <!-- Left: Thumbnail -->
+                    <div class="nr-thumb-wrap video-card" data-video-id="V-_O7nl0Ii0">
+                        <img src="Panthor Pics/Music Video 1.webp" alt="Drifter" loading="lazy">
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                        <div class="nr-pulse-ring"></div>
+                    </div>
+                    <!-- Right: Info -->
+                    <div class="nr-info">
+                        <span class="nr-badge"><span class="nr-dot"></span> New Release</span>
+                        <h3 class="nr-title">Drifter</h3>
+                        <p class="nr-sub">Official Music Video</p>
+                        <p class="nr-desc">The latest visual from Panthor — a cinematic journey through sound and story, shot in the heart of Jamaica.</p>
+                        <div class="nr-actions">
+                            <button class="nr-share-btn" onclick="navigator.share ? navigator.share({title:'Drifter by Panthor',url:window.location.href}) : alert('Link copied!')"><i class="fas fa-share-alt"></i> Share Video</button>
+                            <button class="nr-watch-btn" onclick="document.querySelector('.nr-thumb-wrap').click()"><i class="fas fa-play"></i> Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Videos -->
+            <p class="more-videos-label">More Videos</p>
+            <div class="more-videos-grid" id="more-videos-grid">
+                <div class="video-card" data-video-id="V-_O7nl0Ii0">
+                    <img src="Panthor Pics/Music Video 2.webp" alt="I Love You" loading="lazy">
+                    <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    <h3>I Love You (Official Video)</h3>
+                </div>
+                <div class="video-card" data-video-id="V-_O7nl0Ii0">
+                    <img src="Panthor Pics/Music Video 3.webp" alt="Take Life Easy" loading="lazy">
+                    <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    <h3>Take Life Easy (Official Video)</h3>
+                </div>
+                <div class="video-card" data-video-id="V-_O7nl0Ii0">
+                    <img src="Panthor Pics/Music Video 4.webp" alt="Gates of Return" loading="lazy">
+                    <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    <h3>Gates of Return (Official Video)</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/1.webp" alt="Panthor at the rocks by the sea" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/2.webp" alt="Panthor on the beach" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/3.webp" alt="Panthor by the ocean in white" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/4.webp" alt="Panthor at a Jamaican spot" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/5.webp" alt="Panthor by the Caribbean sea" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/6.webp" alt="Panthor" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/7.webp" alt="Panthor" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/8.webp" alt="Panthor" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="gallery-item"><img src="Panthor Pics/Edited Pics/9.webp" alt="Panthor" class="gallery-img" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+            </div>
+        </section>
+
+        <!-- Behind the Scenes Section -->
+        <section id="bts" class="section dark-section">
+            <h2 class="section-title">Behind The Scenes</h2>
+            <div class="bts-container">
+                <div class="bts-card">
+                    <img src="Panthor Pics/studio 1.webp" alt="Studio Sessions" loading="lazy">
+                    <div class="bts-content">
+                        <h3>Studio Sessions</h3>
+                        <p>Late night recording for the upcoming album in Kingston, capturing the authentic sound of Jamaica.</p>
+                    </div>
+                </div>
+                <div class="bts-card reverse">
+                    <img src="Panthor Pics/Edited Pics/behind the scenes video shoot.webp" alt="Video Shoot" loading="lazy">
+                    <div class="bts-content">
+                        <h3>Video Shoot</h3>
+                        <p>On set for the "St. Mary Vibes" music video, bringing the visual story to life with dynamic energy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Send a booking request — delivered straight to Panthor's inbox</p>
+            <div class="contact-container">
+                <form class="contact-form" id="bookingForm">
+
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">Your Phone (optional)</label>
+                    </div>
+                    <div class="input-group">
+                        <select id="inquiry" name="inquiry" required>
+                            <option value="" disabled selected></option>
+                            <option value="Booking">Booking</option>
+                            <option value="Press & Media">Press &amp; Media</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                        <label for="inquiry" style="top: -10px; font-size: 0.8rem; color: var(--gold-primary);">Subject</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <div class="submit-row" style="margin-top: 10px;">
+                        <button type="submit" class="btn btn-whatsapp submit-btn magnetic-btn">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Spotify" data-social="spotify"><i class="fab fa-spotify"></i></a>
+            <a href="#" aria-label="Apple Music" data-social="apple-music"><i class="fab fa-apple"></i></a>
+            <a href="https://www.instagram.com/derrick3303/" target="_blank" rel="noopener" aria-label="Instagram" data-social="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@derrickjames9941" target="_blank" rel="noopener" aria-label="YouTube" data-social="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> Panthor Music. All rights reserved.</p>
+        <p>Label: <a href="https://maunnellmusic.com" target="_blank" rel="noopener" style="color:var(--gold-primary);">Maunnell Music</a></p>
+        <p><a href="epk.html" style="color:var(--gold-primary);font-size:0.85rem;letter-spacing:1px;">Electronic Press Kit</a></p>
+        <p class="credits">Designed with <i class="fas fa-heart" style="color: #d4af37;"></i> from Jamaica</p>
+    </footer>
+
+    <!-- Media Lightbox Modal -->
+    <div class="modal" id="mediaModal">
+        <div class="modal-close"><i class="fas fa-times"></i></div>
+        <div class="modal-prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="modal-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="modal-content">
+            <!-- Content Injected via JS -->
+        </div>
+    </div>
+
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js?v=5" defer></script>
+</body>
+</html>

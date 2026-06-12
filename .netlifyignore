@@ -1,0 +1,15 @@
+# Development tools (not needed on live site)
+tmp-tools/
+
+# Archive file (MP3s already extracted to MP3s/mp3s/mp3s/)
+MP3s/*.7z
+
+# iPhone HEIC originals (large, unoptimized — webp versions used instead)
+**/*.HEIC
+
+# Unoptimized raw BTS photos (not referenced in site)
+Panthor Pics/Behind The Scenes/
+
+# Loose working files in root
+ChatGPT Image*.png
+Panthor Pics/Screenshot*.png

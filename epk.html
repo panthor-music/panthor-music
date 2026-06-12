@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panthor — Electronic Press Kit</title>
+    <meta name="description" content="Official Electronic Press Kit for Panthor — Reggae & Caribbean Music Artist from Jamaica.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-dim: #b8962e;
+            --gold-soft: rgba(212,175,55,0.12);
+            --bg: #050505;
+            --bg2: #111111;
+            --border: rgba(212,175,55,0.14);
+            --muted: #888888;
+            --light: #f5f5f5;
+            --red: #cc1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--light);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { opacity: 0.75; }
+
+        /* ══════════════════════════════
+           HERO
+        ══════════════════════════════ */
+        .epk-hero {
+            position: relative;
+            background: linear-gradient(180deg, #0e0b02 0%, #050505 100%);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            overflow: hidden;
+        }
+
+        .epk-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 500px;
+            background: radial-gradient(ellipse at center, rgba(212,175,55,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .epk-hero-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 0 auto 1.25rem;
+            display: block;
+            filter: drop-shadow(0 0 16px rgba(212,175,55,0.4));
+        }
+
+        .epk-chip {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.35);
+            padding: 0.28rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .epk-hero h1 {
+            font-size: clamp(3rem, 9vw, 6rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            line-height: 1;
+            background: linear-gradient(135deg, #f5f5f5 30%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .epk-hero-sub {
+            font-size: 0.88rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .epk-hero-sub span {
+            color: var(--gold);
+            margin: 0 0.5rem;
+            font-size: 0.65rem;
+        }
+
+        .epk-btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+            color: #050505;
+        }
+        .btn-primary:hover { opacity: 0.85; }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--light);
+            border: 1px solid var(--border);
+        }
+        .btn-ghost:hover { border-color: var(--gold); color: var(--gold); opacity: 1; }
+
+        /* ══════════════════════════════
+           WRAPPER
+        ══════════════════════════════ */
+        .epk-wrap {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 0 1.5rem 5rem;
+        }
+
+        /* ══════════════════════════════
+           SECTION
+        ══════════════════════════════ */
+        .epk-sec { padding-top: 4rem; }
+
+        .sec-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .sec-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ══════════════════════════════
+           BIO
+        ══════════════════════════════ */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .bio-img-wrap { position: relative; }
+
+        .bio-img-wrap img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            border: 1px solid var(--border);
+        }
+
+        .bio-img-caption {
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 0.6rem;
+            letter-spacing: 0.04em;
+        }
+
+        .bio-text p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.95rem;
+        }
+
+        .bio-text p:last-child { margin-bottom: 0; }
+
+        /* ══════════════════════════════
+           STATS
+        ══════════════════════════════ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .stat-card .val {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat-card .lbl {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+        }
+
+        /* ══════════════════════════════
+           MUSIC / TRACKS
+        ══════════════════════════════ */
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+
+        .track-pill {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.9rem 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .track-pill .tnum {
+            font-size: 0.7rem;
+            color: var(--gold);
+            font-weight: 700;
+            min-width: 18px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        .track-pill .tname {
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--light);
+        }
+
+        .track-pill i {
+            margin-left: auto;
+            color: var(--gold);
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        /* ══════════════════════════════
+           PRESS PHOTOS
+        ══════════════════════════════ */
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+        }
+
+        .photos-grid .photo {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            aspect-ratio: 1;
+        }
+
+        .photos-grid .photo.wide {
+            grid-column: span 2;
+            aspect-ratio: 2/1;
+        }
+
+        .photos-grid .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .photos-grid .photo:hover img { transform: scale(1.04); }
+
+        .photos-note {
+            margin-top: 0.85rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        /* ══════════════════════════════
+           VENUES
+        ══════════════════════════════ */
+        .venues-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .venue-row {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.9rem 1.4rem;
+        }
+
+        .venue-row i {
+            color: var(--gold);
+            font-size: 0.9rem;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .venue-row span {
+            font-size: 0.88rem;
+            color: var(--light);
+            font-weight: 500;
+        }
+
+        .venue-row .venue-loc {
+            margin-left: auto;
+            font-size: 0.78rem;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+
+        /* ══════════════════════════════
+           SOCIAL
+        ══════════════════════════════ */
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .soc-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.5rem 1.1rem;
+            font-size: 0.85rem;
+            color: var(--light);
+            transition: border-color 0.2s;
+            text-decoration: none;
+        }
+
+        .soc-pill:hover { border-color: var(--gold); opacity: 1; }
+        .soc-pill i { color: var(--gold); width: 16px; text-align: center; }
+
+        /* ══════════════════════════════
+           CONTACT
+        ══════════════════════════════ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .contact-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem 1.25rem 1.35rem;
+        }
+
+        .contact-card .icon {
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-card h4 {
+            font-size: 0.68rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .contact-card a,
+        .contact-card p {
+            font-size: 0.88rem;
+            color: var(--light);
+            word-break: break-all;
+        }
+
+        /* ══════════════════════════════
+           FOOTER
+        ══════════════════════════════ */
+        .epk-footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .epk-footer a { color: var(--muted); }
+        .epk-footer a:hover { color: var(--gold); opacity: 1; }
+
+        /* ══════════════════════════════
+           PRINT
+        ══════════════════════════════ */
+        @media print {
+            @page { margin: 0.8cm 1cm; size: A4; }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .epk-btns { display: none !important; }
+
+            .epk-hero { padding: 1.2rem 1.5rem 1rem !important; }
+            .epk-hero-logo { width: 52px !important; margin-bottom: 0.5rem !important; }
+            .epk-chip { margin-bottom: 0.4rem !important; }
+            .epk-hero h1 { font-size: 2.4rem !important; margin-bottom: 0.2rem !important; }
+            .epk-hero-sub { margin-bottom: 0 !important; }
+
+            .epk-sec { padding-top: 1.5rem !important; }
+            .epk-wrap { padding-bottom: 1.5rem !important; }
+
+            .bio-grid { grid-template-columns: 180px 1fr !important; gap: 1.5rem !important; }
+            .bio-text p { font-size: 0.8rem !important; margin-bottom: 0.6rem !important; }
+
+            .stat-card { padding: 0.9rem 0.75rem !important; }
+            .stat-card .val { font-size: 1.6rem !important; }
+
+            .contact-card { padding: 0.85rem 1rem !important; }
+
+            .bio-grid, .stats-grid, .track-pill, .venue-row,
+            .contact-card, .social-grid { page-break-inside: avoid; }
+
+            .epk-sec { page-break-inside: auto; }
+        }
+
+        /* ══════════════════════════════
+           RESPONSIVE
+        ══════════════════════════════ */
+        @media (max-width: 640px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .bio-img-wrap { max-width: 260px; margin: 0 auto; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .tracks-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .photos-grid { grid-template-columns: repeat(2, 1fr); }
+            .photos-grid .photo.wide { grid-column: span 2; aspect-ratio: 16/9; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<header class="epk-hero">
+    <img src="Panthor Pics/sitelogo.webp" alt="Panthor" class="epk-hero-logo">
+    <div class="epk-chip">Electronic Press Kit</div>
+    <h1>Panthor</h1>
+    <p class="epk-hero-sub">Singer <span>◆</span> Songwriter <span>◆</span> Performer</p>
+    <div class="epk-btns">
+        <button class="btn btn-primary" id="epk-print-btn" type="button">
+            <i class="fas fa-download"></i> Download EPK (PDF)
+        </button>
+        <a href="index.html" class="btn btn-ghost">
+            <i class="fas fa-arrow-left"></i> Back to Website
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+            <i class="fas fa-envelope"></i> Booking Inquiry
+        </a>
+    </div>
+</header>
+
+<div class="epk-wrap">
+
+    <!-- ── BIO ── -->
+    <section class="epk-sec">
+        <p class="sec-label">Artist Biography</p>
+        <div class="bio-grid">
+            <div class="bio-img-wrap">
+                <img src="Panthor Pics/Edited Pics/About Photo.webp" alt="Panthor — Official Press Photo">
+                <p class="bio-img-caption">Panthor — Official Press Photo</p>
+            </div>
+            <div class="bio-text">
+                <p>Born in the musical city of Kingston, <strong style="color:var(--gold);">Panthor</strong> began his musical journey in the seventies and migrated to the US in 1971. There, he attended Eastern District High School and received formal voice training at Kingsborough Community College, where he sang in the choir.</p>
+                <p>His first recording was done at the legendary Bullwackies Recording Studio in Brooklyn — a cornerstone of New York's reggae scene. Over the years, he has performed at popular clubs in Brooklyn, pool parties in Queens and Long Island, and sang with both the Brimstone Band and the Melody Vibez Band.</p>
+                <p>Panthor has graced the stages of several premier hotels and venues in Jamaica, including the Bahia Principe, FDR, Treasure Beach, Travellers Inn, Tek It Easy, and Amnesia Night Club. He brings a warm, soulful energy to every stage — from intimate lounges to large-scale events.</p>
+                <p>Currently working with some of the industry's greatest musicians, Panthor continues to create music rooted in authentic Caribbean culture. His debut catalog of eleven original, fully mastered tracks is available now. Music has always been a passionate love for him — he gives thanks to the Almighty for life, health, and strength.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── AT A GLANCE ── -->
+    <section class="epk-sec">
+        <p class="sec-label">At a Glance</p>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="val">50+</div>
+                <div class="lbl">Years Performing</div>
+            </div>
+            <div class="stat-card">
+                <div class="val">11</div>
+                <div class="lbl">Original Tracks</div>
+            </div>
+            <div class="stat-card">
+                <div class="val" style="font-size:1.25rem;padding-top:0.4rem;">Jamaica<br><span style="font-size:0.8rem;color:var(--muted);">→ New York</span></div>
+                <div class="lbl" style="margin-top:0.35rem;">Origin</div>
+            </div>
+            <div class="stat-card">
+                <div class="val" style="font-size:1.15rem;padding-top:0.4rem;">Reggae<br><span style="font-size:0.8rem;color:var(--muted);">/ Caribbean</span></div>
+                <div class="lbl" style="margin-top:0.35rem;">Genre</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MUSIC ── -->
+    <section class="epk-sec">
+        <p class="sec-label">Original Catalog — 11 Mastered Tracks</p>
+        <div class="tracks-grid">
+            <div class="track-pill">
+                <span class="tnum">01</span>
+                <span class="tname">Drifter</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">02</span>
+                <span class="tname">Gates of Return</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">03</span>
+                <span class="tname">I Love You</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">04</span>
+                <span class="tname">Life Is for Man to Live</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">05</span>
+                <span class="tname">No War</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">06</span>
+                <span class="tname">No Woman Stands Alone</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">07</span>
+                <span class="tname">Oh Jah</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">08</span>
+                <span class="tname">Purpose</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">09</span>
+                <span class="tname">School Days</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">10</span>
+                <span class="tname">Take Life Easy</span>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="track-pill">
+                <span class="tnum">11</span>
+                <span class="tname">Water Pumpee</span>
+                <i class="fas fa-music"></i>
+            </div>
+        </div>
+        <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">Label: <a href="https://maunnellmusic.com" target="_blank" rel="noopener">Maunnell Music</a> &nbsp;·&nbsp; All tracks fully mastered and available for licensing.</p>
+    </section>
+
+    <!-- ── NOTABLE VENUES ── -->
+    <section class="epk-sec">
+        <p class="sec-label">Notable Venues &amp; Performances</p>
+        <div class="venues-list">
+            <div class="venue-row">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Bullwackies Recording Studio</span>
+                <span class="venue-loc">Brooklyn, NY</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-star"></i>
+                <span>Bahia Principe &amp; FDR Resort</span>
+                <span class="venue-loc">Jamaica</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-star"></i>
+                <span>Treasure Beach Hotel</span>
+                <span class="venue-loc">Jamaica</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-star"></i>
+                <span>Travellers Inn &amp; Tek It Easy</span>
+                <span class="venue-loc">Jamaica</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-star"></i>
+                <span>Amnesia Night Club</span>
+                <span class="venue-loc">Jamaica</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-music"></i>
+                <span>Clubs &amp; Pool Parties</span>
+                <span class="venue-loc">Brooklyn, Queens &amp; Long Island, NY</span>
+            </div>
+            <div class="venue-row">
+                <i class="fas fa-drum"></i>
+                <span>Brimstone Band &amp; Melody Vibez Band</span>
+                <span class="venue-loc">Live Performances</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PRESS PHOTOS ── -->
+    <section class="epk-sec">
+        <p class="sec-label">Press Photos</p>
+        <div class="photos-grid">
+            <div class="photo wide"><img src="Panthor Pics/Edited Pics/1.webp" alt="Panthor"></div>
+            <div class="photo"><img src="Panthor Pics/Edited Pics/2.webp" alt="Panthor"></div>
+            <div class="photo"><img src="Panthor Pics/Edited Pics/3.webp" alt="Panthor"></div>
+            <div class="photo"><img src="Panthor Pics/Edited Pics/4.webp" alt="Panthor"></div>
+            <div class="photo"><img src="Panthor Pics/Edited Pics/5.webp" alt="Panthor"></div>
+            <div class="photo"><img src="Panthor Pics/Edited Pics/6.webp" alt="Panthor"></div>
+        </div>
+        <p class="photos-note">For hi-res press photos contact <a href="mailto:panthormusicmaunnell@gmail.com">panthormusicmaunnell@gmail.com</a></p>
+    </section>
+
+    <!-- ── SOCIAL ── -->
+    <section class="epk-sec">
+        <p class="sec-label">Find Panthor Online</p>
+        <div class="social-grid">
+            <a href="https://www.instagram.com/derrick3303/" target="_blank" rel="noopener noreferrer" class="soc-pill">
+                <i class="fab fa-instagram"></i> @derrick3303
+            </a>
+            <a href="https://www.youtube.com/@derrickjames9941" target="_blank" rel="noopener noreferrer" class="soc-pill">
+                <i class="fab fa-youtube"></i> @derrickjames9941
+            </a>
+            <a href="https://panthor-music.vercel.app" target="_blank" rel="noopener noreferrer" class="soc-pill">
+                <i class="fas fa-globe"></i> panthor-music.vercel.app
+            </a>
+            <span class="soc-pill" style="opacity:0.5;cursor:default;">
+                <i class="fab fa-spotify"></i> Spotify — Coming Soon
+            </span>
+            <span class="soc-pill" style="opacity:0.5;cursor:default;">
+                <i class="fab fa-apple"></i> Apple Music — Coming Soon
+            </span>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section class="epk-sec" id="contact">
+        <p class="sec-label">Booking &amp; Contact</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <h4>Booking &amp; Management</h4>
+                <a href="mailto:panthormusicmaunnell@gmail.com">panthormusicmaunnell@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-microphone"></i></div>
+                <h4>Press &amp; Media</h4>
+                <a href="mailto:panthormusicmaunnell@gmail.com">panthormusicmaunnell@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/18762545480" target="_blank">+1 (876) 254-5480</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-record-vinyl"></i></div>
+                <h4>Record Label</h4>
+                <a href="https://maunnellmusic.com" target="_blank" rel="noopener">Maunnell Music</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="epk-footer">
+    <p>&copy; 2026 Panthor Music. All Rights Reserved. &nbsp;&mdash;&nbsp; <a href="index.html">panthor-music.vercel.app</a></p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+document.getElementById('epk-print-btn').addEventListener('click', function () {
+    const btn = this;
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF…';
+    btn.disabled = true;
+
+    const btns = document.querySelector('.epk-btns');
+    btns.style.visibility = 'hidden';
+
+    const opt = {
+        margin:     [8, 8, 8, 8],
+        filename:   'Panthor-EPK.pdf',
+        image:      { type: 'jpeg', quality: 0.95 },
+        html2canvas:{ scale: 2, useCORS: true, logging: false },
+        jsPDF:      { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(document.body).save().then(function () {
+        btns.style.visibility = '';
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+    });
+});
+</script>
+</body>
+</html>

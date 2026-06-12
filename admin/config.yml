@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "Panthor Pics/Edited Pics"
+public_folder: "/Panthor Pics/Edited Pics"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "General Settings"
+        file: "_data/settings.json"
+        fields:
+          - label: "Hero Subtitle"
+            name: "hero_subtitle"
+            widget: "string"
+            hint: "Shown below the PANTHOR heading on the homepage"
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+              - { label: "Spotify URL", name: "spotify", widget: "string", required: false, hint: "Leave empty until live on Spotify" }
+              - { label: "Apple Music URL", name: "apple_music", widget: "string", required: false, hint: "Leave empty until live on Apple Music" }
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp Number (digits only, e.g. 18762545480)", name: "whatsapp", widget: "string" }
+              - { label: "Booking Email", name: "email", widget: "string" }
+
+  - name: "about"
+    label: "Artist Bio"
+    files:
+      - name: "about"
+        label: "Bio Paragraphs"
+        file: "_data/about.json"
+        fields:
+          - label: "Main Paragraphs (always visible)"
+            name: "paragraphs"
+            widget: "list"
+            hint: "Basic HTML allowed, e.g. <strong>Panthor</strong>"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Extended Paragraphs (shown under Read More)"
+            name: "paragraphs_extended"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "videos"
+    label: "Music Videos"
+    files:
+      - name: "videos"
+        label: "Videos"
+        file: "_data/videos.json"
+        fields:
+          - label: "Show 'Coming Soon' Badge"
+            name: "coming_soon"
+            widget: "boolean"
+            default: true
+            hint: "Turn off once real videos are live on YouTube"
+          - label: "Featured Video"
+            name: "featured"
+            widget: "object"
+            fields:
+              - { label: "YouTube Video ID", name: "video_id", widget: "string", hint: "The part after ?v= in the YouTube URL" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle (e.g. Official Music Video)", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Thumbnail", name: "thumbnail", widget: "string", hint: "Path to thumbnail image, e.g. Panthor Pics/Music Video 1.webp" }
+          - label: "More Videos"
+            name: "more_videos"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "YouTube Video ID", name: "video_id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Thumbnail", name: "thumbnail", widget: "string", hint: "Path to thumbnail image" }
+
+  - name: "tracks"
+    label: "Music Tracks"
+    files:
+      - name: "tracks"
+        label: "Track List"
+        file: "_data/tracks.json"
+        fields:
+          - label: "Tracks"
+            name: "tracks"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Audio File Path", name: "src", widget: "string", hint: "e.g. MP3s/mp3s/mp3s/Drifter bpm 160 Final Master.mp3" }

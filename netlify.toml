@@ -1,0 +1,82 @@
+# IMPORTANT: Set up form notification email in the Netlify dashboard:
+# Forms → contact → Notifications → Add notification → Email → panthormusicmaunnell@gmail.com
+
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = false
+  minify = true
+
+[build.processing.js]
+  bundle = false
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Long-lived cache for fingerprinted static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Images — long cache, no immutable (content can change without rename)
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/Panthor Pics/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/Panthor Pics/Edited Pics/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Fonts & icons via CDN — already cached at CDN, but also cache at edge
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Audio files — medium cache
+[[headers]]
+  for = "/MP3s/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# CMS content files — always fresh
+[[headers]]
+  for = "/_data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# HTML — no cache (always fresh)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Security headers on all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
