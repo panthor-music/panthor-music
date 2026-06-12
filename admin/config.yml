@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: panthor-music/panthor-music
+  branch: master
 
 media_folder: "Panthor Pics/Edited Pics"
 public_folder: "/Panthor Pics/Edited Pics"
