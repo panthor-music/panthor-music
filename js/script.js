@@ -72,16 +72,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // 1. Preloader
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                preloader.classList.add('fade-out');
-                setTimeout(() => preloader.style.display = 'none', 500);
-            }, 800);
-        });
-    }
 
 
     // 3. Magnetic Buttons
