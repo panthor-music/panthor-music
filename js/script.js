@@ -204,13 +204,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             mpTot.textContent = durations[idx] ? fmt(durations[idx]) : '--:--';
             document.querySelectorAll('.mp-track-item').forEach((r,i) => r.classList.toggle('active', i===idx));
             document.querySelector('.mp-track-item.active')?.scrollIntoView({block:'nearest',behavior:'smooth'});
-            if (autoplay) { audio.play(); setUI(true); } else { setUI(false); }
+            if (autoplay) { audio.play().catch(() => setUI(false)); setUI(true); } else { setUI(false); }
         }
 
         btnPlay.addEventListener('click', () => {
             if (curIdx === -1) { loadTrack(0, true); return; }
             if (isPlaying) { audio.pause(); setUI(false); }
-            else { audio.play(); setUI(true); }
+            else { audio.play().catch(() => setUI(false)); setUI(true); }
         });
 
         btnNext.addEventListener('click', () => loadTrack((curIdx+1) % TRACKS.length, isPlaying || curIdx===-1));
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             mpCur.textContent = fmt(audio.currentTime);
 
             // Always enforce hard cap — show modal every time they try to play past 1min
-            if (audio.currentTime > 60) {
+            if (audio.currentTime >= 60) {
                 audio.currentTime = 60;
                 audio.pause();
                 setUI(false);
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
         audio.addEventListener('loadedmetadata', () => { mpTot.textContent = fmt(audio.duration); });
-        audio.addEventListener('ended', () => loadTrack((curIdx+1) % TRACKS.length, true));
+        audio.addEventListener('ended', () => { loadTrack((curIdx+1) % TRACKS.length, true); });
 
         // Seek bar — click (desktop) + touch drag (mobile), capped at 60s
         const PREVIEW_LIMIT = 60;
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Initialize volume track highlight on load
             updateVolume();
             
-            mpVol.addEventListener('input', updateVolume);
+            mpVol.addEventListener('input', () => { updateVolume(); if (fadingOut) userVolume = parseFloat(mpVol.value); });
             mpVol.addEventListener('change', updateVolume);
         }
     }
@@ -471,6 +471,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
+        if (!navbar) return;
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
