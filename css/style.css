@@ -1,3 +1,7 @@
+/* Override Font Awesome font-display to avoid invisible text during load */
+@font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; src: local(''); }
+@font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; src: local(''); }
+
 :root {
     --bg-main: #050505;
     --bg-secondary: #111111;
