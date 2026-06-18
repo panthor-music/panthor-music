@@ -184,12 +184,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             row.innerHTML = `<span class="mp-tnum">${i+1}</span><span class="mp-tname">${t.title}</span><span class="mp-tdur" id="mpd${i}">--:--</span>`;
             row.addEventListener('click', () => loadTrack(i, true));
             mpList.appendChild(row);
-            // Pre-load duration only
-            const tmp = new Audio(t.src);
+            // Fetch metadata only — preload="metadata" downloads ~first 128KB max, not full file
+            const tmp = new Audio();
+            tmp.preload = 'metadata';
             tmp.addEventListener('loadedmetadata', () => {
                 durations[i] = tmp.duration;
                 document.getElementById('mpd'+i).textContent = fmt(tmp.duration);
+                tmp.src = ''; // release after metadata loaded
             });
+            tmp.src = t.src;
         });
 
         function setUI(playing) {
